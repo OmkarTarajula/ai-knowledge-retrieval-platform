@@ -1,0 +1,4 @@
+Issue_ID,Issue_Name,Resolution_Steps,Severity
+101,Database Timeout,Verify pool size and restart active database connections in config,High
+102,VPN Reset Procedure,Open Corporate Portal then select MFA Verification to generate new temporary password,Medium
+103,Application Deployment,Run staging test suite then tag git release and trigger automated CI/CD pipeline,Critical

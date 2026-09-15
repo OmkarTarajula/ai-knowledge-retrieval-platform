@@ -1,0 +1,218 @@
+[
+  {
+    "chunk_id": "hr_policy.txt_chunk_1_113ae0",
+    "text": "COMPANY LEAVE AND BENEFITS POLICY\r\n1. Annual Earned Leave: Full-time employees receive 24 days of annual earned leave per calendar year.\r\n2. Casual Leave: Employees are granted 12 days of casual leave annually for personal matters.\r\n3. Sick Leave: Employees receive 10 days of paid sick leave. A medical certificate is required for absences exceeding 2 consecutive days.\r\n4. Leave Application Procedure: To apply for earned or casual leave, submit a request via the HR Employee Self-Service Portal at least 3 business days in advance. Your reporting manager must approve the request before the leave starts.\r\n5. Difference Between Casual and Sick Leave: Casual leave must be planned and requested in advance, whereas sick leave can be claimed retroactively upon unforeseen medical emergencies.",
+    "metadata": {
+      "file_name": "hr_policy.txt",
+      "file_type": ".txt",
+      "domain": "HR & Operations",
+      "page_number": 1,
+      "section": "Body",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "hr_policy.txt_chunk_1_71572f",
+    "text": "COMPANY LEAVE AND BENEFITS POLICY\r\n1. Annual Earned Leave: Full-time employees receive 24 days of annual earned leave per calendar year.\r\n2. Casual Leave: Employees are granted 12 days of casual leave annually for personal matters.\r\n3. Sick Leave: Employees receive 10 days of paid sick leave. A medical certificate is required for absences exceeding 2 consecutive days.\r\n4. Leave Application Procedure: To apply for earned or casual leave, submit a request via the HR Employee Self-Service Portal at least 3 business days in advance. Your reporting manager must approve the request before the leave starts.\r\n5. Difference Between Casual and Sick Leave: Casual leave must be planned and requested in advance, whereas sick leave can be claimed retroactively upon unforeseen medical emergencies.",
+    "metadata": {
+      "file_name": "hr_policy.txt",
+      "file_type": ".txt",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Body",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "hr_policy.txt_chunk_1_46c489",
+    "text": "COMPANY LEAVE AND BENEFITS POLICY\r\n1. Annual Earned Leave: Full-time employees receive 24 days of annual earned leave per calendar year.\r\n2. Casual Leave: Employees are granted 12 days of casual leave annually for personal matters.\r\n3. Sick Leave: Employees receive 10 days of paid sick leave. A medical certificate is required for absences exceeding 2 consecutive days.\r\n4. Leave Application Procedure: To apply for earned or casual leave, submit a request via the HR Employee Self-Service Portal at least 3 business days in advance. Your reporting manager must approve the request before the leave starts.\r\n5. Difference Between Casual and Sick Leave: Casual leave must be planned and requested in advance, whereas sick leave can be claimed retroactively upon unforeseen medical emergencies.",
+    "metadata": {
+      "file_name": "hr_policy.txt",
+      "file_type": ".txt",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Body",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_1_7f5187",
+    "text": "Issue_ID: 101, Issue_Name: Database Timeout, Resolution_Steps: Verify pool size and restart active database connections in config, Severity: High",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 1",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_2_fe03e7",
+    "text": "Issue_ID: 102, Issue_Name: VPN Reset Procedure, Resolution_Steps: Open Corporate Portal then select MFA Verification to generate new temporary password, Severity: Medium",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 2",
+      "chunk_index": 2
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_3_438f12",
+    "text": "Issue_ID: 103, Issue_Name: Application Deployment, Resolution_Steps: Run staging test suite then tag git release and trigger automated CI/CD pipeline, Severity: Critical",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 3",
+      "chunk_index": 3
+    }
+  },
+  {
+    "chunk_id": "hr_policy.txt_chunk_1_7f20f1",
+    "text": "COMPANY LEAVE AND BENEFITS POLICY\r\n1. Annual Earned Leave: Full-time employees receive 24 days of annual earned leave per calendar year.\r\n2. Casual Leave: Employees are granted 12 days of casual leave annually for personal matters.\r\n3. Sick Leave: Employees receive 10 days of paid sick leave. A medical certificate is required for absences exceeding 2 consecutive days.\r\n4. Leave Application Procedure: To apply for earned or casual leave, submit a request via the HR Employee Self-Service Portal at least 3 business days in advance. Your reporting manager must approve the request before the leave starts.\r\n5. Difference Between Casual and Sick Leave: Casual leave must be planned and requested in advance, whereas sick leave can be claimed retroactively upon unforeseen medical emergencies.",
+    "metadata": {
+      "file_name": "hr_policy.txt",
+      "file_type": ".txt",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Body",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_1_d8f9de",
+    "text": "Issue_ID: 101, Issue_Name: Database Timeout, Resolution_Steps: Verify pool size and restart active database connections in config, Severity: High",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 1",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_2_749420",
+    "text": "Issue_ID: 102, Issue_Name: VPN Reset Procedure, Resolution_Steps: Open Corporate Portal then select MFA Verification to generate new temporary password, Severity: Medium",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 2",
+      "chunk_index": 2
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_3_43e233",
+    "text": "Issue_ID: 103, Issue_Name: Application Deployment, Resolution_Steps: Run staging test suite then tag git release and trigger automated CI/CD pipeline, Severity: Critical",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 3",
+      "chunk_index": 3
+    }
+  },
+  {
+    "chunk_id": "hr_policy.txt_chunk_1_2d3206",
+    "text": "COMPANY LEAVE AND BENEFITS POLICY\r\n1. Annual Earned Leave: Full-time employees receive 24 days of annual earned leave per calendar year.\r\n2. Casual Leave: Employees are granted 12 days of casual leave annually for personal matters.\r\n3. Sick Leave: Employees receive 10 days of paid sick leave. A medical certificate is required for absences exceeding 2 consecutive days.\r\n4. Leave Application Procedure: To apply for earned or casual leave, submit a request via the HR Employee Self-Service Portal at least 3 business days in advance. Your reporting manager must approve the request before the leave starts.\r\n5. Difference Between Casual and Sick Leave: Casual leave must be planned and requested in advance, whereas sick leave can be claimed retroactively upon unforeseen medical emergencies.",
+    "metadata": {
+      "file_name": "hr_policy.txt",
+      "file_type": ".txt",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Body",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_1_cd8958",
+    "text": "Issue_ID: 101, Issue_Name: Database Timeout, Resolution_Steps: Verify pool size and restart active database connections in config, Severity: High",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 1",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_2_4190c4",
+    "text": "Issue_ID: 102, Issue_Name: VPN Reset Procedure, Resolution_Steps: Open Corporate Portal then select MFA Verification to generate new temporary password, Severity: Medium",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 2",
+      "chunk_index": 2
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_3_c088cd",
+    "text": "Issue_ID: 103, Issue_Name: Application Deployment, Resolution_Steps: Run staging test suite then tag git release and trigger automated CI/CD pipeline, Severity: Critical",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 3",
+      "chunk_index": 3
+    }
+  },
+  {
+    "chunk_id": "hr_policy.txt_chunk_1_20a3e3",
+    "text": "COMPANY LEAVE AND BENEFITS POLICY\r\n1. Annual Earned Leave: Full-time employees receive 24 days of annual earned leave per calendar year.\r\n2. Casual Leave: Employees are granted 12 days of casual leave annually for personal matters.\r\n3. Sick Leave: Employees receive 10 days of paid sick leave. A medical certificate is required for absences exceeding 2 consecutive days.\r\n4. Leave Application Procedure: To apply for earned or casual leave, submit a request via the HR Employee Self-Service Portal at least 3 business days in advance. Your reporting manager must approve the request before the leave starts.\r\n5. Difference Between Casual and Sick Leave: Casual leave must be planned and requested in advance, whereas sick leave can be claimed retroactively upon unforeseen medical emergencies.",
+    "metadata": {
+      "file_name": "hr_policy.txt",
+      "file_type": ".txt",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Body",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_1_35845c",
+    "text": "Issue_ID: 101, Issue_Name: Database Timeout, Resolution_Steps: Verify pool size and restart active database connections in config, Severity: High",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 1",
+      "chunk_index": 1
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_2_ab64c1",
+    "text": "Issue_ID: 102, Issue_Name: VPN Reset Procedure, Resolution_Steps: Open Corporate Portal then select MFA Verification to generate new temporary password, Severity: Medium",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 2",
+      "chunk_index": 2
+    }
+  },
+  {
+    "chunk_id": "tech_support.csv_chunk_3_775ac8",
+    "text": "Issue_ID: 103, Issue_Name: Application Deployment, Resolution_Steps: Run staging test suite then tag git release and trigger automated CI/CD pipeline, Severity: Critical",
+    "metadata": {
+      "file_name": "tech_support.csv",
+      "file_type": ".csv",
+      "domain": "Technical Support",
+      "page_number": 1,
+      "section": "Row 3",
+      "chunk_index": 3
+    }
+  }
+]
