@@ -71,8 +71,9 @@ with st.sidebar:
                     with open(temp_path, "wb") as f:
                         f.write(uploaded_file.getbuffer())
 
-                    docs = parser.parse(temp_path)
-                    chunks = chunker.chunk(docs)
+                    content_blocks, parsed_meta = DocumentParser.parse_file(temp_path, filename=uploaded_file.name)
+                    chunks = chunker.chunk_document(content_blocks, parsed_meta)
+                    
                     all_chunks.extend(chunks)
 
                     if os.path.exists(temp_path):
@@ -113,7 +114,13 @@ def execute_pipeline(query_text: str):
             else:
                 response_text = str(raw_ans) if raw_ans else "No answer generated."
 
-            retrieved_chunks = result.get("sources", result.get("retrieved_chunks", []))
+            # Prioritize retrieved chunks with full text and metadata for the transparency panel
+            retrieved_chunks = (
+                result.get("retrieved_chunks")
+                or (result.get("retrieval_result", {}).get("chunks") if isinstance(result.get("retrieval_result"), dict) else None)
+                or result.get("sources")
+                or []
+            )
         else:
             response_text = str(result)
             retrieved_chunks = []
@@ -136,7 +143,13 @@ def handle_incoming_query(raw_query: str):
         return
 
     contextual_query = st.session_state.memory_agent.resolve_context(raw_query.strip())
-    clarification_check = st.session_state.clarification_agent.evaluate(contextual_query)
+
+    # Feed intent analysis into clarification agent for robust ambiguity detection
+    query_analysis = None
+    if hasattr(st.session_state.orchestrator, "query_agent"):
+        query_analysis = st.session_state.orchestrator.query_agent.analyze_query(contextual_query)
+
+    clarification_check = st.session_state.clarification_agent.evaluate(contextual_query, query_analysis)
 
     if clarification_check["needs_clarification"]:
         st.session_state.pending_clarification = {
@@ -179,7 +192,7 @@ for msg in st.session_state.chat_display_history:
             # Response Transparency Panel
             chunks = msg.get("chunks", [])
             if not chunks and isinstance(raw_msg_content, dict):
-                chunks = raw_msg_content.get("sources", raw_msg_content.get("retrieved_chunks", []))
+                chunks = raw_msg_content.get("retrieved_chunks", raw_msg_content.get("sources", []))
             st.session_state.transparency_panel.render(chunks)
 
 

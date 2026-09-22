@@ -20,10 +20,13 @@ class ClarificationAgent:
         tokens = [t.lower() for t in raw_query.split() if t]
         token_count = len(tokens)
 
-        # 1. Intent check from QueryUnderstandingAgent
+        # 1. Intent check from QueryUnderstandingAgent or explicit payload
         intent = "UNKNOWN"
         if intent_payload and isinstance(intent_payload, dict):
-            intent = intent_payload.get("intent", "UNKNOWN").upper()
+            raw_intent = intent_payload.get("intent") or intent_payload.get("query_type") or ""
+            intent = str(raw_intent).upper()
+            if intent_payload.get("routing") == "clarification":
+                intent = "AMBIGUOUS"
 
         is_flagged_ambiguous = (intent == "AMBIGUOUS")
 
@@ -90,8 +93,11 @@ class ClarificationAgent:
         if any(lower_init.startswith(p) for p in ("what are the fees", "what is the cost", "cost of")):
             return f"What are the fees for {clean_clarify}?"
 
-        if lower_init.startswith("what is the process of"):
+        if lower_init.startswith("what is the process of") or lower_init.startswith("what is the process"):
             return f"What is the process of {clean_clarify}?"
+
+        if lower_init.startswith("can i know"):
+            return f"Can I know about {clean_clarify}?"
 
         # General connector
         return f"{clean_init} regarding {clean_clarify}"

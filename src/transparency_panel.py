@@ -9,6 +9,17 @@ class ResponseTransparencyPanel:
         self.high_threshold = high_threshold
         self.medium_threshold = medium_threshold
 
+    @staticmethod
+    def _extract_score(chunk: Dict[str, Any]) -> float:
+        """Safely extracts similarity score across all agent and vector store schemas."""
+        for key in ("similarity_score", "score", "similarity"):
+            if key in chunk and chunk[key] is not None:
+                try:
+                    return float(chunk[key])
+                except (ValueError, TypeError):
+                    pass
+        return 0.0
+
     def calculate_confidence(self, chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
         Derives an aggregated confidence score and qualitative rating
@@ -22,7 +33,8 @@ class ResponseTransparencyPanel:
                 "badge": "Insufficient Evidence"
             }
 
-        top_score = max(chunk.get("score", chunk.get("similarity", 0.0)) for chunk in chunks)
+        scores = [self._extract_score(chunk) for chunk in chunks]
+        top_score = max(scores) if scores else 0.0
 
         if top_score >= self.high_threshold:
             level = "HIGH"
@@ -74,10 +86,25 @@ class ResponseTransparencyPanel:
         # Display chunks inside collapsible expanders
         for idx, chunk in enumerate(retrieved_chunks, start=1):
             metadata = chunk.get("metadata", {})
-            source_doc = metadata.get("source", metadata.get("file_name", "Unknown Source"))
-            page_or_sec = metadata.get("page", metadata.get("section", metadata.get("row", "N/A")))
-            chunk_id = metadata.get("chunk_id", f"chk-{idx:02d}")
-            score = chunk.get("score", chunk.get("similarity", 0.0))
+            source_doc = (
+                metadata.get("file_name")
+                or metadata.get("source")
+                or chunk.get("file_name")
+                or "Unknown Source"
+            )
+            page_num = metadata.get("page_number", metadata.get("page"))
+            section = metadata.get("section", metadata.get("row"))
+            if page_num and section:
+                page_or_sec = f"{section} (Page {page_num})" if str(page_num) not in str(section) else str(section)
+            else:
+                page_or_sec = str(section or (f"Page {page_num}" if page_num else "N/A"))
+
+            chunk_id = (
+                chunk.get("chunk_id")
+                or metadata.get("chunk_id")
+                or f"chk-{idx:02d}"
+            )
+            score = self._extract_score(chunk)
             text_snippet = chunk.get("text", chunk.get("content", "No content available.")).strip()
 
             expander_title = (

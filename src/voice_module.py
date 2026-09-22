@@ -4,6 +4,7 @@ Milestone 3 - Voice Interaction Module (STT & TTS)
 Uses built-in speech_to_text from streamlit_mic_recorder and browser Web Speech TTS.
 """
 
+import json
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -48,12 +49,7 @@ class VoiceInteractionModule:
         """
         Renders native playback controls for synthesized voice output.
         """
-        cleaned_text = (
-            text_content.replace('"', '\\"')
-            .replace("'", "\\'")
-            .replace("\n", " ")
-            .strip()
-        )
+        js_utter_text = json.dumps(text_content or "")
 
         tts_html = f"""
         <div style="margin-top: 8px; padding: 6px 10px; background: #f1f3f5; border-radius: 6px; display: inline-flex; align-items: center; gap: 8px; font-family: sans-serif;">
@@ -66,7 +62,7 @@ class VoiceInteractionModule:
 
         <script>
             let synth = window.speechSynthesis;
-            let utterText = "{cleaned_text}";
+            let utterText = {js_utter_text};
 
             function readAloud() {{
                 if (!synth) return;
@@ -89,4 +85,4 @@ class VoiceInteractionModule:
             }}
         </script>
         """
-        components.html(tts_html, height=50)
+        components.html(tts_html, height=55)

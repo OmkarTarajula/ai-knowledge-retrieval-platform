@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from src.agents.query_understanding_agent import QueryUnderstandingAgent
 
 def run_query_classification_evaluation():

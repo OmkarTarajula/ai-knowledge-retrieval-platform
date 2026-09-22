@@ -53,6 +53,21 @@ class VectorStoreManager:
 
         return added
 
+    def build_index(self, chunks: List[Dict[str, Any]], clear_existing: bool = False) -> int:
+        """
+        Builds or updates the TF-IDF vector index with the given chunks.
+        If clear_existing is True, previously indexed chunks are cleared first.
+        """
+        if clear_existing:
+            self.clear()
+        return self.add_chunks(chunks)
+
+    def clear(self) -> None:
+        """Clears all stored chunks and resets the TF-IDF matrix and persistent storage."""
+        self.chunks = []
+        self.tfidf_matrix = None
+        self._save()
+
     def query(self, query_text: str, top_k: int = 3, domain_filter: str = None) -> List[Dict[str, Any]]:
         if not self.chunks or self.tfidf_matrix is None:
             return []
